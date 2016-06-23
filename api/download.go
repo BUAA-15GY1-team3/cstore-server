@@ -7,7 +7,7 @@ import (
     "github.com/BUAA-15GY1-team3/cstore-server/model"
 )
 
-func ListAllFile(req *http.Request) (errno int, content []byte) {
+func Download(req *http.Request) (errno int, content []byte) {
     recoverPanic(&errno, &content)
 
     param := getGETParam(req)
@@ -16,12 +16,17 @@ func ListAllFile(req *http.Request) (errno int, content []byte) {
         return parseRet(401, "param uname not parsed", nil)
     }
 
+    fid, ok := param["file-id"]
+    if !ok {
+        return parseRet(401, "param fid not parsed", nil)
+    }
+
     user := model.GetUser(uname)
-    ret, err := user.GetAllFile()
+    ret, err := user.DownloadFile(fid)
     if err != nil {
-        errmsg := fmt.Sprintf("request db failed, errmsg: %v", err)
+        errmsg := fmt.Sprintf("%v", err)
         return parseRet(503, errmsg, nil)
     }
 
-    return parseRet(0, "OK", ret)
+    return parseRet(200, "OK", ret)
 }

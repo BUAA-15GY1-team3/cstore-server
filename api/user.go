@@ -11,6 +11,8 @@ import (
 func Login(req *http.Request) (errno int, content []byte) {
     recoverPanic(&errno, &content)
 
+    fmt.Println(req.Header)
+
     param := getPOSTParam(req)
     uname, ok := param["uname"]
     if !ok {
@@ -24,7 +26,8 @@ func Login(req *http.Request) (errno int, content []byte) {
     }
     passStr, _ := utils.String(pass)
 
-    err := model.GetUser(unameStr).Login(passStr)
+    user := model.GetUser(unameStr)
+    err := user.Login(passStr)
     if err != nil {
         errmsg := fmt.Sprintf("%v", err)
         return parseRet(504, errmsg, nil)
@@ -49,7 +52,8 @@ func Register(req *http.Request) (errno int, content []byte) {
     }
     passStr, _ := utils.String(pass)
 
-    err := model.GetUser(unameStr).SetPass(passStr)
+    user := model.GetUser(unameStr)
+    err := user.SetPass(passStr)
     if err != nil {
         errmsg := fmt.Sprintf("%v", err)
         return parseRet(504, errmsg, nil)

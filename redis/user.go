@@ -55,3 +55,15 @@ func GetUserFilelist(uname string) ([]string, error) {
 
     return utils.Strings(ret)
 }
+
+func AddUserFileList(uname, fid string) error {
+    addr := zk.GetRedisAddr()
+    if addr == "" {
+        return fmt.Errorf("Get redis addr from zk failed")
+    }
+
+    key := fmt.Sprintf(USER_FILE_LIST_FORMAT, uname)
+
+    _, err := utils.ReqRedis(addr, "LPUSH", key, fid)
+    return err
+}

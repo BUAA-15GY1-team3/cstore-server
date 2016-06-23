@@ -75,10 +75,18 @@ func main() {
         AllowMethods: []string{"POST", "GET"},
     }))
 
+    //user
     m.Post("/api/login", api.Login)
     m.Post("/api/register", api.Register)
 
+    //list
     m.Get("/api/listAllFile", api.ListAllFile)
+
+    //upload
+    m.Post("/api/upload", api.Upload)
+
+    //download
+    m.Get("/api/download", api.Download)
 
     m.Run()
 }
