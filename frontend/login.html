@@ -3,9 +3,13 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>欢迎登陆-星盘驾到</title>
+	<link rel="icon" href="/resource/images/ico/favicon-16.ico" sizes="16x16">
+	<link rel="icon" href="/resource/images/ico/favicon-32.ico" sizes="32x32">
+	<link rel="icon" href="/resource/images/ico/favicon-48.ico" sizes="48x48">
 </head>
 <body class="body_opacity">
-	<div class="body">
+	<!--主要内容 BEGIN-->
+	<div class="body" id="fshow">
 		<div class="lay_wrap lay_wrap_v2">
 			<div class="lay_main clearfix">
 				<div class="lay_inner">
@@ -13,13 +17,50 @@
 						<h1><i class="ui_icon icon_xpan_logo"></i></h1>
 					</div>
 					<div class="login-panel">
-						<span class="change" style="color:#000;">test</span>
+						<h1>欢迎使用星盘！</h1>
+						<div class="form_item_wrap">
+							<div class="form_item">
+								<label class="user_ico">&nbsp;</label>
+								<input id="un" type="text"  class="ipt ipt_username gay_text" placeholder="邮箱/手机/用户名">
+							</div>
+							<div class="form_item">
+								<label class="paswd_ico">&nbsp;</label>
+								<input id="un" type="password"  class="ipt ipt_username gay_text" placeholder="密码">
+							</div>
+							<div class="auto_login clearfix">
+								<div class="clearfix">
+									<a id="check_agreement" href="#" class="uncheck_agreement">自动登录</a>
+								</div>
+								<button id="login_button" type="button" class="login_btn">登录</button>
+							</div>
+						</div>
+						<div class="change">
+							<a href="regist.html" class="quc-link-yp-reg">注册新账号</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="lay_foot">
+				<div class="lay_inner">
+					<div class="login_device">
+						<ul>
+							<li><a><i class="ui_icon icon_iphone"></i><span>iPhone</span></a></li>
+							<li><a><i class="ui_icon icon_ipad"></i><span>iPad</span></a></li>
+							<li><a><i class="ui_icon icon_android"></i><span>Android</span></a></li>
+							<li><a><i class="ui_icon icon_windowsphone"></i><span>Windows</span></a></li>
+							<li><a><i class="ui_icon icon_other"></i><span>其他手机</span></a></li>
+						</ul>
+					</div>
+					<div class="copyright">
+						<p class="copyright_en">
+							Copyright © 2005 - 2016 XinPan.
+							<a>All Rights Reserved.</a></p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
+	<!--主要内容 BEGIN-->
 	<!--背景动画 BEGIN-->
 	<div class="bg" id="container">
 		<div id="anitOut" class="anitOut"></div>

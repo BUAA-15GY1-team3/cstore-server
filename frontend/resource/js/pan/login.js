@@ -2,61 +2,7 @@
 *星盘首页
  */
 define(function (require, exports) {
-	$(function(){
-		$.fn.bannerShow = function (g) {
-			g = jQuery.extend({
-				wraper: "fshow",
-				autotime: 6000,
-				isAuto: true,
-				ind: 0,
-				changeColor: null
-			}, g || {});
-			return this.each(function () {
-				var o;
-				var n = 0;
-				var i = this;
-				var j = $("#bnav"),
-					k = $("li", j);
-				var h = [
-	                ["#ac0908", "#cd5726"],
-	                ["18bbff", "#00486b"],
-	                ["#35ac03", "#3f4303"],
-
-	            ];
-				$(this).hover(function () {
-					g.isAuto = false
-				}, function () {
-					g.isAuto = true
-				});
-				m(0);
-				o = setInterval(function () {
-					if (!g.isAuto) {
-						return false
-					}
-					k.each(function (p, q) {
-						if ($(q).hasClass("current")) {
-							n = p
-						}
-						m(n)
-					});
-					if (n == k.size() - 1) {
-						n = 0;
-						m(n);
-					} else {
-						n += 1;
-						m(n);
-					}
-				}, g.autotime);
-
-				function m(p) {
-					$(".banners", i).hide();
-					$(".banners", i).eq(p).show();
-					if (g.changeColor) {
-						g.changeColor(h[p]).set()
-					}
-				}
-			})
-		};
+	$(window).load(function(){
 		if (!!document.createElement("canvas").getContext) {
 			var t = {
 				width: 1.5,
@@ -75,8 +21,8 @@ define(function (require, exports) {
 				count: 2,
 				xyScalar: 1,
 				zOffset: 100,
-				ambient: "#ac0908",
-				diffuse: "#cd5726",
+				ambient: "#18bbff",
+				diffuse: "#00486b",
 				speed: 0.001,
 				gravity: 1200,
 				dampening: 0.95,
@@ -257,14 +203,15 @@ define(function (require, exports) {
 			}
 			C();
 		}
-		var h = [
-                ["#ac0908", "#cd5726"],
-                ["18bbff", "#00486b"],
-                ["#35ac03", "#3f4303"],
 
-            ];
-		$(".change").on('click',function(){
-			$(".body").changeColor(h[2]).set();
-		})
+		/*点击自动登录*/
+		$("#check_agreement").on("click", function(){
+			$(this).toggleClass('check_agreement')
+		});
+		$(".form_item").on("mouseover",function(){
+			$(this).addClass("current");
+		}).on("mouseout",function(){
+			$(this).removeClass("current");
+		});
 	})
 })

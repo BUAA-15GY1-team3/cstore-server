@@ -20,19 +20,6 @@ body {
     height: auto;
     background-color: #fff;
 }
-body{
-    opacity: 0;
-    filter: alpha(opacity=0);
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    transition: all .3s ease;
-    overflow: auto;
-}
-.body_opacity{
-    opacity: 1;
-    filter: alpha(opacity=100);
-}
 body,
 p,
 form,

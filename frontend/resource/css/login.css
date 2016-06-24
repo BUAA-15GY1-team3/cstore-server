@@ -33,7 +33,7 @@ html,body{
     background: url("/resource/images/ban1.png") no-repeat scroll center center;
 }
 .bgz {
-    background: url("../images/bgz.png") repeat scroll left top transparent;
+    background: url("/resource/images/bgz.png") repeat scroll left top transparent;
     height: 100%;
     left: 0;
     opacity: 0.6;
@@ -42,9 +42,12 @@ html,body{
     width: 100%;
     z-index: 10;
 }
+
+/*lay_wrap*/
 .body{
 	position: relative;
 	z-index: 200;
+    height: 100%;
 }
 .lay_wrap {
     color: #4b4a4a;
@@ -66,8 +69,9 @@ html,body{
     position: relative;
 }
 .icon_xpan_logo{
-	width: 251px;
-    height: 98px;
+	width: 300px;
+    height: 141px;
+    background: url(/resource/images/logo-white.png) no-repeat 0 0;
 }
 .lay_wrap_v2 .lay_main .login-panel {
 	background: #fff;
@@ -77,7 +81,195 @@ html,body{
     height: 336px;
     right: 0;
     top: 34px;
-    width: 288px;
+    width: 320px;
     position: absolute;
     z-index: 100;
+}
+.login-panel h1 {
+    color: #1e71a8;
+    font-weight: 400;
+    font: normal 20px/75px "Microsoft Yahei","微软雅黑",SimSun,sans-serif;
+    height: 66px;
+    margin-left: 30px;
+    width: 227px;
+}
+.form_item_wrap {
+    width: 290px;
+    margin: 0 auto;
+}
+.form_item_wrap .form_item {
+    position: relative;
+    z-index: 100;
+    height: 24px;
+    margin-bottom: 10px;
+    padding: 14px 18px;
+    border: 1px solid #dedede;
+    background: #FFF;
+    line-height: 24px;
+}
+.form_item_wrap .form_item.current{
+    border:1px solid #aaa;
+    z-index: 101;
+}
+.form_item_wrap .form_item label {
+    display: inline-block;
+    width: 42px;
+    vertical-align: middle;
+    color: #666;
+}
+.form_item_wrap .form_item .user_ico {
+    background: url(/resource/images/login_new.png) no-repeat -50px 4px;
+}
+.form_item_wrap .form_item .paswd_ico {
+    background: url(/resource/images/login_new.png) no-repeat -150px 4px;
+}
+.form_item_wrap .form_item .ipt {
+    width: 190px;
+    height: 24px;
+    padding-left: 3px;
+    border: 0 none;
+    line-height: 24px;
+    vertical-align: middle;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+}
+.form_item_wrap .form_item .gay_text {
+    color: #ccc;
+    outline: none;
+}
+.form_item_wrap .form_item .gay_text:focus,
+.form_item_wrap .form_item.current .gay_text{
+    color: #aaa;
+}
+.form_item_wrap .auto_login {
+    position: relative;
+    margin: 10px 0;
+    line-height: 24px;
+    min-height: 24px;
+    _height: 24px;
+}
+.form_item_wrap a.uncheck_agreement {
+    float: left;
+    padding-left: 18px;
+    background: url(/resource/images/login_new.png) no-repeat -347px -265px;
+    color: #999;
+}
+.form_item_wrap a.uncheck_agreement:hover {
+    background-position: -347px -295px;
+    color: #999;
+}
+.form_item_wrap a.uncheck_agreement:hover {
+    background-position: -347px -295px;
+    color: #999;
+}
+.form_item_wrap a.check_agreement,
+.form_item_wrap a.check_agreement:hover {
+    background: url(/resource/images/login_new.png) no-repeat -347px -325px;
+}
+.form_item_wrap .login_btn {
+    width: 100%;
+    height: 52px;
+    border: 0 none;
+    border-radius: 3px;
+    background: #4a9afd;
+    font-size: 16px;
+    color: #FFF;
+    cursor: pointer;
+    text-shadow: 1px 1px 1px #3e90f5;
+    font-family: "Microsoft YaHei";
+    line-height: 52px;
+    margin-top: 5px;
+    outline: none;
+}
+.form_item_wrap .login_btn:hover{
+    background-color: #3e90f5;
+}
+.login-panel .change {
+    background-color: #f2f7fa;
+    border-top: 1px solid #e6ecf0;
+    bottom: 0;
+    height: 40px;
+    left: 0;
+    line-height: 40px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+.login-panel .change .quc-link-yp-reg {
+    display: inline-block;
+    padding: 0 12px;
+}
+
+/*lay_foot*/
+.lay_wrap .lay_foot {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+.lay_wrap .lay_inner {
+    width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+.lay_wrap .lay_foot .login_device {
+    margin: 0 auto 20px;
+    text-align: center;
+}
+.lay_wrap .lay_foot .login_device li {
+    display: inline-block;
+    zoom: 1;
+    width: 60px;
+    text-align: center;
+    vertical-align: top;
+    margin: 0 5px;
+}
+.lay_wrap .lay_foot .login_device li a {
+    display: block;
+    text-decoration: none;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    position: relative;
+    z-index: 10;
+    top: 0;
+}
+.lay_wrap .lay_foot .login_device li a:hover {
+    top: -10px;
+}
+.lay_foot .login_device .ui_icon {
+    width: 28px;
+    height: 28px;
+    vertical-align: top;
+    background-image: url(/resource/images/login-jan.png);
+    background-position: -60px -73px;
+}
+.lay_foot .login_device .icon_iphone{
+    background-position: -60px -73px;
+}
+.lay_foot .login_device .icon_ipad{
+    background-position: -60px -103px;
+}
+.lay_foot .login_device .icon_android{
+    background-position: -90px -43px;
+}
+.lay_foot .login_device .icon_windowsphone{
+    background-position: -90px -103px;
+}
+.lay_foot .login_device .icon_other{
+    background-position: -90px -73px;
+}
+.lay_wrap .lay_foot .login_device li span {
+    display: block;
+    padding-top: 5px;
+    color: #fff;
+}
+.lay_wrap .lay_foot .copyright {
+    text-align: center;
+    color: #fff;
+}
+.lay_wrap .lay_foot .copyright p,
+.lay_wrap .lay_foot .copyright a {
+    line-height: 22px;
+    color: #fff;
 }
