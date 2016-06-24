@@ -5,6 +5,8 @@ import (
     "net/http"
     "crypto/md5"
 
+    utils "github.com/tjuqxy/go-utils"
+
     "github.com/BUAA-15GY1-team3/cstore-server/redis"
 )
 
@@ -18,7 +20,7 @@ func GetUser(uname string) User {
     return u
 }
 
-func (u *User) GetAllFile() ([]File, error) {
+func (u *User) GetAllFile() (*Dir, error) {
     fList, err := redis.GetUserFilelist(u.Uname)
     if err != nil {
         return nil, err
@@ -33,7 +35,16 @@ func (u *User) GetAllFile() ([]File, error) {
         }
     }
 
-    return fileList, nil
+    d := CreateDir("root")
+    for _, f := range fileList {
+        pathList, err := utils.GetPath(f.FPath)
+        if err != nil {
+            return nil, err
+        }
+        d.AddFile(pathList, &f)
+    }
+
+    return d, nil
 }
 
 func (u *User) Login(pass string) error {
@@ -87,13 +98,14 @@ func (u *User) UploadFile(path, name string, req *http.Request) error {
 }
 
 func (u *User) DownloadFile(id string) (string, error) {
-    fList, err := u.GetAllFile()
+    fList, err := redis.GetUserFilelist(u.Uname)
     if err != nil {
         return "", err
     }
 
-    for _, file := range fList {
-        if file.Fid == id {
+    for _, fName := range fList {
+        if fName == id {
+            file := GetFile(id)
             return file.Download()
         }
     }
