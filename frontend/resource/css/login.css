@@ -1,0 +1,83 @@
+/**
+ * @file   星盘登陆css
+ * @author yumeng02
+ * @creattime   2016-06-24
+ * @endtime   2016-06-24
+ */
+/* ********************************************************************************************** */
+/* **************************************星盘登陆y************************************************** */
+/* ********************************************************************************************** */
+html,body{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.bg{
+	background: none repeat scroll 0 0 #006fb5;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+.anitOut {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background: url("/resource/images/ban1.png") no-repeat scroll center center;
+}
+.bgz {
+    background: url("../images/bgz.png") repeat scroll left top transparent;
+    height: 100%;
+    left: 0;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+.body{
+	position: relative;
+	z-index: 200;
+}
+.lay_wrap {
+    color: #4b4a4a;
+    height: 100%;
+    position: relative;
+    min-height: 600px;
+    z-index: 200;
+}
+.lay_wrap .lay_main {
+    color: #fff;
+    position: absolute;
+    top: 95px;
+    width: 100%;
+    z-index: 999;
+}
+.lay_wrap .lay_inner {
+    width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+.icon_xpan_logo{
+	width: 251px;
+    height: 98px;
+}
+.lay_wrap_v2 .lay_main .login-panel {
+	background: #fff;
+    -webkit-box-shadow: 0 0 2px rgba(0,0,0,.13),0 1px 5px rgba(0,0,0,.36),inset 0 0 0 1px rgba(255,255,255,.69);
+    -moz-box-shadow: 0 0 2px rgba(0,0,0,.13),0 1px 5px rgba(0,0,0,.36),inset 0 0 0 1px rgba(255,255,255,.69);
+    box-shadow: 0 0 2px rgba(0,0,0,.13),0 1px 5px rgba(0,0,0,.36),inset 0 0 0 1px rgba(255,255,255,.69);
+    height: 336px;
+    right: 0;
+    top: 34px;
+    width: 288px;
+    position: absolute;
+    z-index: 100;
+}
