@@ -25,7 +25,7 @@ func TestRegister(t *testing.T) {
         return
     }
 
-    ret, err := utils.POST("http://127.0.0.1:3000/api/register", string(dataStr))
+    ret, err := utils.POST("http://127.0.0.1:8080/api/register", string(dataStr))
     fmt.Println(string(ret), err)
 }
 
@@ -41,6 +41,6 @@ func TestLogin(t *testing.T) {
         return
     }
 
-    ret, err := utils.POST("http://127.0.0.1:3000/api/login", string(dataStr))
+    ret, err := utils.POST("http://127.0.0.1:8080/api/login", string(dataStr))
     fmt.Println(string(ret), err)
 }
