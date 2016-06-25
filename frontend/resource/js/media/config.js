@@ -7,7 +7,11 @@ seajs.config({
      	'xpanGlobal': 'js/media/global',
         // login
         'xpanLoginStyle':'css/login.css',
-        'xpanLogin':'js/pan/login'
+        'xpanLogin':'js/pan/login',
+
+        // index
+        'xpanIndexStyle':'css/index.css',
+        'xpanIndex':'js/pan/index'
      }
  });
  seajs.use('xpanGlobal');

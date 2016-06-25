@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>星盘xpan-我的星盘</title>
+	<link rel="icon" href="/resource/images/ico/favicon-16.ico" sizes="16x16">
+	<link rel="icon" href="/resource/images/ico/favicon-32.ico" sizes="32x32">
+	<link rel="icon" href="/resource/images/ico/favicon-48.ico" sizes="48x48">
+	<link rel="stylesheet" href="/resource/css/common.css">
+</head>
+<body>
+	<!--主要内容 BEGIN-->
+	<div class="body" id="doc">
+		<!--头部-->
+		<div id="topPanel" class="header clearfix">
+			<a id="logo" class="logo" href="/index.html" title="我的星盘"></a>
+			<ul class="nav-bar clearfix">
+				<li class="tab-file first current">
+					<a class="pan" href="/index.html" onclick="return false;" title="我的文件">我的文件</a>
+				</li>
+			</ul>
+			<div class="top-bar-r heigher">
+				<div class="user-info-wrap user-info-wrap-vip">
+					<div class="user-name">
+						<a id="tpUserInfo" href="###" onclick="return false;" title="yumeng02">
+							<span class="avatar-mask"></span>
+							<img class="avatar" src="/resource/images/index/user.jpg" width="32" height="32" alt=""><span class="name-box">
+								<span class="text">yumeng02</span>
+							</span>
+						</a>
+					</div>
+					<div class="userInfo">
+						<ul class="menu menu-user-info">
+							<li>
+								<a id="profile" href="/login.html">
+									<i class="icon profile"></i>
+									<span class="text">帐号登录</span>
+								</a>
+							</li>
+							<li>
+								<a id="profile" href="/regist.html">
+									<i class="icon icon-complain"></i>
+									<span class="text">帐号注册</span>
+								</a>
+							</li>
+							<li class="loginout">
+								<a class="exit" id="tpExit" href="/logout">
+									<i class="icon logout"></i>
+									<span class="text">退出星盘</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--头部 end-->
+		<!--左侧-->
+		<div id="leftPanel">
+			<div class="nav">
+				<ul>
+					<li class="tab-file clearfix current" data-tab="file">
+		                <a tabindex="1">
+		                    <i class="icon icon-file"></i>
+		                    <span class="text">所有文件</span>
+		                    <span class="bg"></span>
+		                </a>
+		            </li>
+				</ul>
+			</div>
+			<div class="space-box" style="display: block;">
+		        <span class="progress">
+		            <span class="progress-used" style="width: 2.5%;"></span>
+		        </span>
+		        <div class="space-content clearfix">
+		            <span class="space-desc">463.07MB/1.35TB</span>
+		        </div>
+		    </div>
+		    <div class="copyright-protect">
+		        <a>版权保护投诉指引</a>
+		    </div>
+		</div>
+		<!--左侧 end-->
+		<!--主侧-->
+		<div id="mainPanel">
+			<div id="mainTabs">
+				<!--顶部按钮-->
+				<div id="toolbar" class="cmd-panel">
+					<div class="btn-group btns-filelist">
+						<div class="item">
+							<span id="tbUpload" class="y-btn y-btn-blue upload show">
+								<i class="icon icon-upload"></i>
+								<span class="label">上传文件</span>
+							</span>
+						</div>
+						<div class="item">
+							<span id="tbNew" class="y-btn y-btn-gray new show" data-cn="new">
+								<i class="icon icon-new"></i>
+								<span class="label">新建文件夹</span>
+							</span>
+						</div>
+						<div class="item download">
+							<span id="tbPackDl" class="y-btn y-btn-gray pack-dl y-btn-disable show" data-cn="pack-dl">
+								<i class="icon icon-download"></i>
+								<span class="label">下载</span>
+							</span>
+						</div>
+					</div>
+				</div>
+				<!--搜索框-->
+				<div class="real-search-bar search-bar search-none" style="">            
+		            <div class="search-input-ctn">
+		              	<input class="search-input search-text" placeholder="搜索我的文件" data-placeholder="搜索我的文件">
+		            </div>  
+		            <span class="y-btn y-btn-gray y-btn-submit">
+		            	<i class="icon icon-search"></i>
+		            </span>
+		        </div>
+		        <!--面包屑-->
+		        <div id="crumb" class="cmd-panel">
+		        	<div class="crumb-path">
+		        		<span class="first-item last-item path-item" data-index="-1" title="所有文件" style="max-width: 96%;">所有文件</span>
+		        	</div>
+		        </div>
+		        <!--文件列表-->
+		        <div id="fileList" class="file-list-box clearfix file-tab">
+		        	<div id="fileListMain">
+		        		<div id="listHolder" class="clearfix">
+		        			<ul id="list" class="file-list clearfix ico-list">
+		        				<li class="row filelist-item clearfix">
+		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
+										<span class="ico ico-folder"></span>
+										<span class="text">word</span>
+									</div>
+		        				</li>
+		        				<li class="row filelist-item clearfix">
+		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
+										<span class="ico ico-folder"></span>
+										<span class="text">112312321321321321321</span>
+									</div>
+		        				</li>
+		        				<li class="row filelist-item clearfix">
+		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
+										<span class="ico ico-videofolder"></span>
+										<span class="text">word</span>
+									</div>
+		        				</li>
+		        				<li class="row filelist-item clearfix">
+		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
+										<span class="ico ico-folder"></span>
+										<span class="text">word</span>
+									</div>
+		        				</li>
+		        				<li class="row filelist-item clearfix">
+		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
+										<span class="ico ico-picfolder"></span>
+										<span class="text">word</span>
+									</div>
+		        				</li>
+		        				<li class="row filelist-item clearfix">
+		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
+										<span class="ico ico-folder"></span>
+										<span class="text">word</span>
+									</div>
+		        				</li>
+		        				<li class="row filelist-item clearfix">
+		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
+										<span class="ico ico-wordfolder"></span>
+										<span class="text">word</span>
+									</div>
+		        				</li>
+		        				<li class="row filelist-item clearfix">
+		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
+										<span class="ico ico-musicfolder"></span>
+										<span class="text">word</span>
+									</div>
+		        				</li>
+		        				<li class="row filelist-item clearfix">
+		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
+										<span class="ico ico-bookfolder"></span>
+										<span class="text">word</span>
+									</div>
+		        				</li>
+		        				<li class="row filelist-item clearfix">
+		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
+										<span class="ico ico-folder"></span>
+										<span class="text">word</span>
+									</div>
+		        				</li>
+		        			</ul>
+
+		        		</div>
+		        	</div>
+		        </div>
+			</div>
+		</div>
+	</div>
+	<!--主要内容 BEGIN-->
+	<!--配置文件-->
+	<script src="resource/js/media/jquery.js" type="text/javascript"></script>
+	<script src="resource/js/media/bootstrap.min.js" type="text/javascript"></script>
+    <script src="resource/js/media/sea.js" type="text/javascript"></script>
+    <script src="resource/js/media/config.js" type="text/javascript"></script>
+    <!--引入登录页conf-->        
+    <script src="resource/js/conf/index.config.js" type="text/javascript"></script>
+</body>
+</html>
