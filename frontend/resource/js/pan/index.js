@@ -8,8 +8,9 @@ define(function (require, exports) {
 		topBar();
 		// 文件夹的选项
 		var times = null;
-		$(".column-name").on("click", function () {
+		$(".column-name").on("click", function (e) {
             $(this).parent().addClass("active").siblings().removeClass("active");
+            e.stopPropagation();  // 阻止事件冒泡
             clearTimeout(times);
         }).on("mouseover, mouseenter", function () {
             clearTimeout(times);
@@ -18,6 +19,10 @@ define(function (require, exports) {
                 $(this).parent().removeClass("hover");
             }, 100)
         })
+        // 点击别处失焦
+        $(document).on("click",function(){
+        	$("#list").find("li").removeClass('active');
+        });
         // 切换文件夹视图
         var ulList = $("#list");
         var headList = $("#fileListHead");
@@ -35,6 +40,7 @@ define(function (require, exports) {
         	ulList.addClass("ico-list").removeClass("list-list");
         	$(this).addClass('cur').siblings().removeClass("cur");
         });
+
 
         // 点击上传文件
         $("#tbUpload").on("click", function(){

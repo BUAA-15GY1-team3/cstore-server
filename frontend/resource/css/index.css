@@ -695,6 +695,9 @@
 .ico-list .ico, .ico-list .column-name .ico {
     position: relative;
 }
+.ico-list .ico{
+    background-image: url("/resource/images/index/icon/ico-file.png");
+}
 .ico-list .ico-folder {
     background-image: url("/resource/images/index/icon/folder.png");
 }
@@ -722,7 +725,7 @@
     background-image: url("/resource/images/index/icon/folder-unempty.png");
 }
 .ico-list .ico-mix {
-    background-image: url("/resource/images/index/icon/ico-mix.png");
+    background-image: url("/resource/images/index/icon/mix-folder.png");
 }
 
 .ico-list .ico-access,
@@ -872,6 +875,38 @@
 }
 
 /*小图标*/
+.list-list .ico{
+    background-image: url("/resource/images/index/icon/file.png");
+}
+.list-list .ico-folder {
+    background-image: url("/resource/images/index/icon/folder-sm.png");
+}
+.list-list .ico-bookfolder {
+    background-image: url("/resource/images/index/icon/book-folder-sm.png");
+}
+.list-list .ico-musicfolder {
+    background-image: url("/resource/images/index/icon/music-folder-sm.png");
+}
+.list-list .ico-picfolder {
+    background-image: url("/resource/images/index/icon/pic-folder-sm.png");
+}
+.list-list .ico-videofolder {
+    background-image: url("/resource/images/index/icon/video-folder-sm.png");
+}
+.list-list .ico-wordfolder {
+    background-image: url("/resource/images/index/icon/word-folder-sm.png");
+}
+
+.list-list .ico-folder-empty {
+    background-image: url("/resource/images/index/icon/folder-empty.png");
+}
+
+.list-list .ico-folder-unempty {
+    background-image: url("/resource/images/index/icon/folder-unempty.png");
+}
+.list-list .ico-mix {
+    background-image: url("/resource/images/index/icon/ico-mix.png");
+}
 .list-list .ico-fromphonefolder {
     background-image: url("/resource/images/index/icon/fromphone-folder.png");
 }
@@ -1040,8 +1075,7 @@
     background-image: url("/resource/images/index/icon/bt.png");
 }
 
-.list-list .ico-file,
-.list-list .ico-folder {
+.list-list .ico-file{
     background-image: url("/resource/images/index/icon/file.png");
 }
 
@@ -1109,6 +1143,8 @@
     color: #6a6b6c;
     overflow: hidden;
     display: none;
+    height: 36px;
+    border-bottom: 1px solid #d3dfec;
 }
 .file-list-box .column {
     color: #a8a9aa;
@@ -1293,4 +1329,84 @@
     display: block;
     height: 22px;
     width: 22px;
+}
+
+.upload-list-main{
+    position: absolute;
+    width: auto;
+    height: 40px;
+    left: 20px;
+    top: 30px;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 22px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-control {
+    border-color: #cbd5dd;
+    border-radius: 2px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    width: 200px;
+    display: inherit;
+    vertical-align: middle;
+    cursor: not-allowed;
+    background-color: #eee;
+    opacity: 1;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    height: 22px;
+    line-height: 22px;
+}
+.btn-default {
+    color: #788188 !important;
+    background-color: #fff;
+    border-color: #dbe2e7;
+    border-bottom-color: #d5dde3;
+    -webkit-box-shadow: 0 1px 1px rgba(90,90,90,0.1);
+    box-shadow: 0 1px 1px rgba(90,90,90,0.1);
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+    color: #788188 !important;
+    background-color: #f2f2f2;
+    border-color: #c2ced6;
+}
+
+#uploadPanel .drag-tip {
+    background: url(/resource/images/index/tips.png) no-repeat 50% 120px;
+    color: #999;
+    height: 42px;
+    padding-top: 120px;
+    text-align: center;
 }

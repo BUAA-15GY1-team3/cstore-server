@@ -106,10 +106,6 @@
 							</span>
 						</div>
 					</div>
-					<div class="display-mode">
-						<a id="tbText" title="切换到列表视图" onclick="return false;" data-cn="text" class="cmd text">列表视图</a>
-						<a id="tbPic" title="切换到大图视图" onclick="return false;" data-cn="pic" class="cmd pic cur">大图标视图</a>
-					</div>
 				</div>
 				<!--搜索框-->
 				<div class="real-search-bar search-bar search-none" style="">            
@@ -123,140 +119,76 @@
 		        <!--面包屑-->
 		        <div id="crumb" class="cmd-panel">
 		        	<div class="crumb-path">
-		        		<span class="back" data-cn="back" data-index="-1">返回上一级</span>
-		        		<span class="first-item path-item" data-index="-1" title="所有文件" style="max-width: 36%;">所有文件</span>
-		        		<span class="last-item path-item" data-index="0" title="112312321321321321321" style="max-width: 57%;">112312321321321321321</span>
+		        		<span class="first-item last-item path-item" data-index="-1" title="所有文件" style="max-width: 96%;">所有文件</span>
 		        	</div>
 		        </div>
 		        <!--文件列表-->
 		        <div id="fileList" class="file-list-box clearfix file-tab">
-		        	<div id="fileListHead" class="file-list-head clearfix">
-		        		<div class="column column-checkbox">
-		        			<label class="chkall"></label>
-		        		</div>
-		        		<div class="column column-name">
-		        			<span class="file-sort" data-field="name">
-		        				文件名
-		        			</span>
-		        		</div>
-		        		<div class="column column-size">
-		        			<span class="file-sort" data-field="fsize">
-		        				大小
-		        			</span>
-		        		</div>
-		        		<div class="column column-time">
-		        			<span class="file-sort" data-field="fmtime">
-		        				修改日期
-		        			</span>
-		        		</div>
-		        	</div>
 		        	<div id="fileListMain">
 		        		<div id="listHolder" class="clearfix">
 		        			<ul id="list" class="file-list clearfix ico-list">
 		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
 		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
 										<span class="ico ico-folder"></span>
 										<span class="text">word</span>
 									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
 		        				</li>
 		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
+		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
+										<span class="ico ico-folder"></span>
+										<span class="text">112312321321321321321</span>
+									</div>
+		        				</li>
+		        				<li class="row filelist-item clearfix">
+		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
+										<span class="ico ico-videofolder"></span>
+										<span class="text">word</span>
+									</div>
+		        				</li>
+		        				<li class="row filelist-item clearfix">
 		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
 										<span class="ico ico-folder"></span>
 										<span class="text">word</span>
 									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
 		        				</li>
 		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
 		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
-										<span class="ico ico-xls"></span>
+										<span class="ico ico-picfolder"></span>
 										<span class="text">word</span>
 									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
 		        				</li>
 		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
-		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
-										<span class="ico ico-txt"></span>
-										<span class="text">word</span>
-									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
-		        				</li>
-		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
-		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
-										<span class="ico ico-html"></span>
-										<span class="text">word</span>
-									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
-		        				</li>
-		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
 		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
 										<span class="ico ico-folder"></span>
 										<span class="text">word</span>
 									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
 		        				</li>
 		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
 		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
-										<span class="ico ico-doc"></span>
+										<span class="ico ico-wordfolder"></span>
 										<span class="text">word</span>
 									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
 		        				</li>
 		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
 		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
-										<span class="ico ico-folder"></span>
+										<span class="ico ico-musicfolder"></span>
 										<span class="text">word</span>
 									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
 		        				</li>
 		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
 		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
-										<span class="ico ico-doc"></span>
+										<span class="ico ico-bookfolder"></span>
 										<span class="text">word</span>
 									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
 		        				</li>
 		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
 		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
 										<span class="ico ico-folder"></span>
 										<span class="text">word</span>
 									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
-		        				</li>
-		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
-		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
-										<span class="ico ico-ppt"></span>
-										<span class="text">word</span>
-									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
 		        				</li>
 		        			</ul>
-		        			<!--<div class="emptyTips" id="emptyTips">
-		        				<img src="/resource/images/index/my_empty_folder.gif" alt="empty folder">
-		        				<h1>您的这个文件夹还是空的哦~</h1>
-		        			</div>-->
+
 		        		</div>
 		        	</div>
 		        </div>
@@ -264,30 +196,6 @@
 		</div>
 	</div>
 	<!--主要内容 BEGIN-->
-	<!--上传浮层-->
-	<div class="mask" style="display:none"></div>
-	<div class="panel panel-t1" id="BaseUpload">
-		<div class="panel-content">
-			<div class="hd">
-				<h3>上传文件到星盘</h3>
-			</div>
-			<div class="bd">
-				<div id="uploadPanel">
-					<div class="upload-list-box">
-						
-					</div>
-				</div>
-			</div>
-			<div class="ft">
-				<span class="y-btn y-btn-gray" id="uploadStatusBtn">完成</span>
-			</div>
-		</div>
-		<span class="close">
-			<a onclick="return false;" class="close-link">
-				<span>关闭</span>
-			</a>
-		</span>
-	</div>
 	<!--配置文件-->
 	<script src="resource/js/media/jquery.js" type="text/javascript"></script>
 	<script src="resource/js/media/bootstrap.min.js" type="text/javascript"></script>
