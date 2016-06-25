@@ -2,9 +2,12 @@
 seajs.config({
      base: '/resource/',
      alias: {
+     	// 全局
      	'xpanCommonStyle':'css/common.css',
+     	'xpanGlobal': 'js/media/global',
         // login
         'xpanLoginStyle':'css/login.css',
         'xpanLogin':'js/pan/login'
      }
  });
+ seajs.use('xpanGlobal');

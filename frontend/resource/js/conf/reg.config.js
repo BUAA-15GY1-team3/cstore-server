@@ -1,8 +1,7 @@
 $(function () {
 	seajs.use('xpanLoginStyle');
 	seajs.use(["js/pan/canvas"], function (canvas) {
-		var arr = ["18bbff", "#00486b"]
+		var arr = ["#ac0908", "#cd5726"];
 	    new canvas(arr);
 	});
-    seajs.use('xpanLogin');
 });

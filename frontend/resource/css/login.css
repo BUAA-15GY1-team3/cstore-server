@@ -166,6 +166,9 @@ html,body{
 .form_item_wrap a.check_agreement:hover {
     background: url(/resource/images/login_new.png) no-repeat -347px -325px;
 }
+.form_item_wrap a.quc-link{
+    color: #ff3c3c;
+}
 .form_item_wrap .login_btn {
     width: 100%;
     height: 52px;
@@ -183,6 +186,24 @@ html,body{
 }
 .form_item_wrap .login_btn:hover{
     background-color: #3e90f5;
+}
+.form_item_wrap .reg_btn {
+    width: 100%;
+    height: 46px;
+    border: 0 none;
+    border-radius: 3px;
+    background: #ff3c3c;
+    font-size: 16px;
+    color: #FFF;
+    cursor: pointer;
+    text-shadow: 1px 1px 1px #ff7373;
+    font-family: "Microsoft YaHei";
+    line-height: 46px;
+    margin-top: 5px;
+    outline: none;
+}
+.form_item_wrap .reg_btn:hover{
+    background-color: #ff0000;
 }
 .login-panel .change {
     background-color: #f2f7fa;
@@ -272,4 +293,13 @@ html,body{
 .lay_wrap .lay_foot .copyright a {
     line-height: 22px;
     color: #fff;
+}
+
+
+/*注册*/
+.lay_wrap_reg .lay_main .login-panel{
+    height: 360px;
+}
+.lay_wrap_reg .form_item_wrap .form_item{
+    padding: 10px 18px;
 }
