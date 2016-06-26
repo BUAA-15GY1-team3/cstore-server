@@ -45,14 +45,13 @@ function loginSubmit(){
 		tips(err, "", false);
 		var data = {
 			Uname: name,
-			Upass: pass
+			Upass: hex_md5(pass)
 		}
-		setCookie("username",name,30);
+		setCookie("username", name, 30);
 		window.location.href = "index.html?file="
 		/*ajaxJsonCall("/api/login", data, "POST", true, function(data){
 			console.log(data);
 		});*/
-		
 	}
 	return true;
 }

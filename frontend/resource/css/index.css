@@ -698,6 +698,9 @@
 .ico-list .ico{
     background-image: url("/resource/images/index/icon/ico-file.png");
 }
+.ico-list .ico-file {
+     background-image: url("/resource/images/index/icon/ico-file.png");
+}
 .ico-list .ico-folder {
     background-image: url("/resource/images/index/icon/folder.png");
 }
@@ -866,9 +869,7 @@
     background-image: url("/resource/images/index/icon/ico-bt.png");
 }
 
-.ico-list .ico-file {
-     background-image: url("/resource/images/index/icon/ico-file.png");
-}
+
 
 .ico-list .ico-apk {
     background-image: url("/resource/images/index/icon/ico-apk.png");
@@ -878,6 +879,10 @@
 .list-list .ico{
     background-image: url("/resource/images/index/icon/file.png");
 }
+.list-list .ico-file{
+    background-image: url("/resource/images/index/icon/file.png");
+}
+
 .list-list .ico-folder {
     background-image: url("/resource/images/index/icon/folder-sm.png");
 }
@@ -1075,9 +1080,6 @@
     background-image: url("/resource/images/index/icon/bt.png");
 }
 
-.list-list .ico-file{
-    background-image: url("/resource/images/index/icon/file.png");
-}
 
 .list-list .ico-apk {
     background-image: url("/resource/images/index/icon/apk.png");
@@ -1208,6 +1210,7 @@
     text-align: center;
     top: 20px;
     width: 336px;
+    display: none;
 }
 #emptyTips h1{
 	font-size: 14px;
@@ -1236,8 +1239,9 @@
     z-index: 0;
     display: none;
     z-index: 102;
-    left: 409px;
-    top: 120px;
+    left: 50%;
+    top: 20%;
+    margin-left: -274px;
 }
 .panel {
     overflow: visible;

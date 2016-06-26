@@ -81,11 +81,19 @@ function ajaxJsonCall(post_path, data, type, async, callback) {
     });
 };
 /*检查错误*/
-function error(msg, flag, callback){
+function dialog(obj, callback){
+    var defaults = {
+        head:"出错喽",
+        title:"报错喽！！",
+        msg:"详细信息",
+        icon:"icon",
+        flag:false
+    };
+    obj = $.extend(defaults, obj);
     var err =   '<div class="ui-widget-overlay ui-front"></div>' +
                 '<div class="ui-dialog ui-widget-content" id="error">' +
                     '<div class="ui-widget-header clearfix">' +
-                        '<span id="ui-id-4" class="ui-dialog-title">出错喽</span>' +
+                        '<span id="ui-id-4" class="ui-dialog-title">' + obj.head + '</span>' +
                         '<button type="button" class="ui-button ui-dialog-titlebar-close ui-close" title="关闭">' +
                             '<span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span>' +
                         '</button>' +
@@ -93,11 +101,11 @@ function error(msg, flag, callback){
                     '<div class="ui-dialog-content ui-widget-content">' +
                         '<div class="ui-dia-msg-box">' +
                             '<div class="ui-dia-msg ui-dia-msg-warning">' +
-                                '<i class="icon"></i>' +
+                                '<i class="icon '+ obj.icon +'"></i>' +
                                 '<div class="ui-dia-msg-text">' +
-                                    '<p>报错喽！！</p>' +
+                                    '<p>' + obj.title + ' </p>' +
                                     '<p></p>' +
-                                    '<p class="info">报错条件</p>' +
+                                    '<p class="info">' + obj.msg + '</p>' +
                                 '</div>' +
                             '</div>' +
                         '</div>' +
@@ -113,9 +121,8 @@ function error(msg, flag, callback){
     var btn = $(".ui-dialog-buttonset");
     $("#error").show();
     $(".ui-widget-overlay").show();
-    $(".ui-dia-msg .info").html(msg);
     // 存在确定
-    if (flag) {
+    if (obj.flag) {
         btn.append('<button type="button" class="ui-button-blue ui-button m-r ui-sure">确 定</button>');
     };
     btn.append('<button type="button"  class="ui-button-default ui-button ui-close">关闭</button>');

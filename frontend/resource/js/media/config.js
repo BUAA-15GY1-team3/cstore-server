@@ -5,12 +5,14 @@ seajs.config({
      	// 全局
      	'xpanCommonStyle':'css/common.css',
      	'xpanGlobal': 'js/media/global',
+        'xpanMD5': 'js/media/md5',
         // login
         'xpanLoginStyle':'css/login.css',
         'xpanLogin':'js/pan/login',
 
         // index
         'xpanIndexStyle':'css/index.css',
+        'xpanIndexNav':'js/pan/index.nav',
         'xpanIndex':'js/pan/index'
      }
  });

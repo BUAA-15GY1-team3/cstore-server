@@ -1,0 +1,184 @@
+{
+    "data": {
+        "dirList":[{
+            "name": "root",
+            "dirList": [{
+                "name": "a2",
+                "dirList": [{
+                    "name": "b",
+                    "dirList": [{
+                        "name": "c",
+                        "dirList": [],
+                        "fileList": [{
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test.txt",
+                            "file-size": "14",
+                            "createtime": ""
+                        }, {
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test.ppt",
+                            "file-size": "14",
+                            "createtime": "2016-06-26 11:40"
+                        }, {
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test",
+                            "file-size": "14",
+                            "createtime": ""
+                        }, {
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test",
+                            "file-size": "14",
+                            "createtime": "2016-06-26 11:40"
+                        }, {
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test",
+                            "file-size": "14",
+                            "createtime": ""
+                        }]
+                    }],
+                    "fileList": []
+                }],
+                "fileList": []
+            },{
+                "name": "a1",
+                "dirList": [{
+                    "name": "b",
+                    "dirList": [{
+                        "name": "c",
+                        "dirList": [],
+                        "fileList": [{
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test",
+                            "file-size": "14",
+                            "createtime": ""
+                        }, {
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test",
+                            "file-size": "14",
+                            "createtime": ""
+                        }, {
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test",
+                            "file-size": "14",
+                            "createtime": ""
+                        }, {
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test",
+                            "file-size": "14",
+                            "createtime": ""
+                        }, {
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test",
+                            "file-size": "14",
+                            "createtime": ""
+                        }]
+                    }],
+                    "fileList": []
+                }],
+                "fileList": []
+            }],
+            "fileList": []
+        },{
+            "name": "root1",
+            "dirList": [{
+                "name": "a2",
+                "dirList": [{
+                    "name": "b",
+                    "dirList": [{
+                        "name": "c",
+                        "dirList": [],
+                        "fileList": [{
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test",
+                            "file-size": "14",
+                            "createtime": ""
+                        }, {
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test",
+                            "file-size": "14",
+                            "createtime": ""
+                        }, {
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test",
+                            "file-size": "14",
+                            "createtime": ""
+                        }, {
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test",
+                            "file-size": "14",
+                            "createtime": ""
+                        }, {
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test",
+                            "file-size": "14",
+                            "createtime": ""
+                        }]
+                    }],
+                    "fileList": []
+                }],
+                "fileList": []
+            },{
+                "name": "a1",
+                "dirList": [{
+                    "name": "b",
+                    "dirList": [{
+                        "name": "c",
+                        "dirList": [],
+                        "fileList": [{
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test",
+                            "file-size": "14",
+                            "createtime": ""
+                        }, {
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test",
+                            "file-size": "14",
+                            "createtime": ""
+                        }, {
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test",
+                            "file-size": "14",
+                            "createtime": ""
+                        }, {
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test",
+                            "file-size": "14",
+                            "createtime": ""
+                        }, {
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test",
+                            "file-size": "14",
+                            "createtime": ""
+                        }]
+                    }],
+                    "fileList": []
+                }],
+                "fileList": []
+            }],
+            "fileList": []
+        }],
+        "fileList": []
+    },
+    "errmsg": "OK",
+    "errno": 0
+}
