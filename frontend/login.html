@@ -19,20 +19,21 @@
 					</div>
 					<div class="login-panel">
 						<h1>欢迎登录星盘！</h1>
+						<p id="error_tips" class="error_tips"></p>
 						<div class="form_item_wrap">
 							<div class="form_item"  data-toggle="tooltip" data-placement="top" title="请输入邮箱/手机/用户名" data-trigger="hover">
 								<label class="user_ico">&nbsp;</label>
-								<input id="un" type="text"  class="ipt ipt_username gay_text" placeholder="邮箱/手机/用户名">
+								<input id="username" type="text"  class="ipt ipt_username gay_text" placeholder="邮箱/手机/用户名">
 							</div>
 							<div class="form_item" data-toggle="tooltip" data-placement="top" title="请输入密码" data-trigger="hover">
 								<label class="paswd_ico">&nbsp;</label>
-								<input id="un" type="password"  class="ipt ipt_username gay_text" placeholder="密码">
+								<input id="password" type="password"  class="ipt ipt_username gay_text" placeholder="密码">
 							</div>
 							<div class="auto_login clearfix">
 								<div class="clearfix">
-									<a id="check_agreement" href="javascript:;" class="uncheck_agreement">自动登录</a>
+									<a id="check_agreement" href="javascript:;" class="uncheck_agreement check_agreement">自动登录</a>
 								</div>
-								<button id="login_button" type="button" class="login_btn">登录</button>
+								<button id="login_button" type="button" class="login_btn" onclick="loginSubmit();">登录</button>
 							</div>
 						</div>
 						<div class="change">

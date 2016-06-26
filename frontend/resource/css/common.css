@@ -349,3 +349,186 @@ i{
   border-width: 0 5px 5px;
   border-bottom-color: #000;
 }
+
+/*错误提示框*/
+.ui-widget-overlay {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: none;
+}
+#error{
+  display: none;
+}
+.ui-widget-overlay {
+    background: #000;
+    opacity: .3;
+    filter: Alpha(Opacity=30);
+    z-index: 220;
+}
+.ui-widget-content {
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    color: #6a6b6c;
+    font-size: 1.1em;
+}
+.ui-dialog {
+    border: 0;
+    box-shadow: 0 0 8px rgba(0,0,0,.35);
+    position: absolute;
+    height: auto;
+    width: 350px;
+    top: 30%;
+    left: 50%;
+    margin-left: -175px;
+    display: block;
+    z-index: 300;
+}
+.ui-widget-header {
+    background: #4592f0;
+    border-bottom: 1px solid #3484e5;
+    border-radius: 2px 2px 0 0;
+    color: #b9d7f6;
+    height: 32px;
+    line-height: 32px;
+    min-height: 10px;
+    position: relative;
+}
+.ui-dialog .ui-dialog-title {
+    float: left;
+    font-size: 14px;
+    overflow: hidden;
+    text-indent: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 90%;
+}
+.ui-dialog .ui-dialog-titlebar-close, .ui-dialog .ui-dialog-titlebar-maximize, .ui-dialog .ui-dialog-titlebar-minimize {
+    float: right;
+    height: 20px;
+    margin: 7px 0 0 3px;
+    padding: 1px;
+    width: 20px;
+    background: transparent;
+    border: 0;
+    margin-right: 4px;
+    cursor: pointer;
+}
+.ui-icon {
+    background-repeat: no-repeat;
+    display: block;
+    overflow: hidden;
+    text-indent: -99999px;
+    background: url(/resource/images/index/mask.png) no-repeat;
+    height: 22px;
+    width: 22px;
+    background-position: -23px 0;
+    margin-top: -12px;
+    position: absolute;
+    top: 50%;
+}
+.ui-icon-closethick:hover{
+   background-position: -23px -22px;
+}
+.ui-dialog .ui-dialog-content {
+    background: none;
+    border: 0;
+    overflow: auto;
+    padding: 10px 14px;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: auto;
+    min-height: 39px;
+    max-height: none;
+    height: auto;
+}
+.ui-dia-msg-box {
+    float: left;
+    left: 50%;
+    padding-top: 20px;
+    position: relative;
+}
+.ui-dia-msg {
+    display: inline;
+    float: left;
+    position: relative;
+    right: 50%;
+}
+.ui-dia-msg .icon {
+    float: left;
+    height: 26px;
+    margin: 0 6px 0 0;
+    width: 26px;
+}
+.ui-dia-msg-warning .icon {
+    background-image: url("/resource/images/warn.png");
+}
+.ui-dia-msg-text {
+    color: #3f4d72;
+    font-size: 14px;
+    line-height: 26px;
+    margin-left: 38px;
+    margin-top: -5px;
+}
+.ui-dia-msg-text .info {
+    color: #babbbc;
+    font-size: 12px;
+}
+.ui-button {
+    cursor: pointer;
+    display: inline-block;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+}
+.ui-dialog .ui-dialog-buttonpane {
+    background-image: none;
+    border-width: 1px 0 0;
+    margin-top: .5em;
+    padding: .3em .4em .5em;
+    text-align: left;
+    border: 0;
+    text-align: center;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+    float: none;
+    text-align: center;
+}
+
+.ui-dialog .ui-dialog-buttonpane button {
+    background: #fff;
+    border-radius: 2px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #bbcbdf;
+    color: #536083;
+    min-width: 85px;
+    cursor: pointer;
+    height: 26px;
+    line-height: 24px;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-button-blue {
+    background-color: #3e94fe;
+    border-color: #3984e5;
+    color: #fff;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-button-default {
+    background-image: -webkit-linear-gradient(bottom,#f5f9fc,#fff);
+    background-image: -moz-linear-gradient(bottom,#f5f9fc,#fff);
+    background-image: -o-linear-gradient(bottom,#f5f9fc,#fff);
+    background-image: linear-gradient(to top,#f5f9fc,#fff);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f5f9fc',GradientType=0 );
+}
+.ui-dialog .ui-dialog-buttonpane .ui-button:hover {
+    background: #3083eb;
+    border-color: #1f74df;
+    color: #fff;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3083eb', endColorstr='#3083eb',GradientType=0 );
+}

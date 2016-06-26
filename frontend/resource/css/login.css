@@ -78,7 +78,7 @@ html,body{
     -webkit-box-shadow: 0 0 2px rgba(0,0,0,.13),0 1px 5px rgba(0,0,0,.36),inset 0 0 0 1px rgba(255,255,255,.69);
     -moz-box-shadow: 0 0 2px rgba(0,0,0,.13),0 1px 5px rgba(0,0,0,.36),inset 0 0 0 1px rgba(255,255,255,.69);
     box-shadow: 0 0 2px rgba(0,0,0,.13),0 1px 5px rgba(0,0,0,.36),inset 0 0 0 1px rgba(255,255,255,.69);
-    height: 336px;
+    height: 345px;
     right: 0;
     top: 34px;
     width: 320px;
@@ -93,6 +93,22 @@ html,body{
     margin-left: 30px;
     width: 227px;
 }
+.login-panel .error_tips {
+    position: absolute;
+    top: 22px;
+    left: 15px;
+    width: 242px;
+    height: 30px;
+    overflow: hidden;
+    padding: 0 10px 0 36px;
+    border: 1px solid #e5debc;
+    border-radius: 1px;
+    background: #fff7d1 url(/resource/images/login_new.png) no-repeat -324px -150px;
+    line-height: 30px;
+    color: #999;
+    display: none;
+}
+
 .form_item_wrap {
     width: 290px;
     margin: 0 auto;
@@ -155,16 +171,16 @@ html,body{
     color: #999;
 }
 .form_item_wrap a.uncheck_agreement:hover {
-    background-position: -347px -295px;
-    color: #999;
-}
-.form_item_wrap a.uncheck_agreement:hover {
-    background-position: -347px -295px;
+    background-position: -347px -384px;
     color: #999;
 }
 .form_item_wrap a.check_agreement,
 .form_item_wrap a.check_agreement:hover {
-    background: url(/resource/images/login_new.png) no-repeat -347px -325px;
+    background: url(/resource/images/login_new.png) no-repeat -347px -416px;
+}
+.form_item_wrap a.reg_agreement,
+.form_item_wrap a.reg_agreement:hover {
+    background: url(/resource/images/login_new.png) no-repeat -347px -324px;
 }
 .form_item_wrap a.quc-link{
     color: #ff3c3c;
