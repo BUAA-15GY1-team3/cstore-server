@@ -127,11 +127,13 @@ function dialog(obj, callback){
     };
     btn.append('<button type="button"  class="ui-button-default ui-button ui-close">关闭</button>');
     // 其他事件
-    $(".ui-close").on("click", function(){
+    $(".ui-close").on("click", function(e){
         $("#error").hide();
         $(".ui-widget-overlay").hide();
+        e.stopPropagation();
     });
     $(".ui-sure").on("click", function(e){
+        e.stopPropagation();
         callback && callback(e);
     });
 }

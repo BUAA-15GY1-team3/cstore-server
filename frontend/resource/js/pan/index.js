@@ -5,11 +5,16 @@ var username = null;
 var path = "#/";
 var fileList = null;
 var dirType = ['folder','bookfolder','mix','picfolder','wordfolder'];
+var downPath = "";
 define(function (require, exports) {
 	$(document).ready(function(){
-        getUrl();
         getUserInfo();
-        list();
+        try {
+            getUrl();
+            list();
+        } catch (e) {
+            console.log(e);
+        }
     });
 
     /**
@@ -115,32 +120,38 @@ define(function (require, exports) {
         var file = "";
         var fileArr = filedata.fileList;
         var dirArr = filedata.dirList;
-        for (var i = 0; i < fileArr.length; i++) {
-            var tips = "发布时间:"+fileArr[i]['createtime']+"&#10;"+"文件大小:"+fileArr[i]['file-size'] + "B";
-            file +=  '<li class="row filelist-item clearfix" data-file="'+ filepath  + fileArr[i]['file-name'] +'/" data-type="file">'+
-                        '<div class="column column-checkbox"><label></label></div>'+
-                        '<div class="column column-name" title = "'+tips+'">'+
-                            '<span class="ico ico-file ico-'+showFileType(fileArr[i]['file-name'])+'"></span>'+
-                            '<span class="text">'+ fileArr[i]['file-name'] +'</span>'+
-                        '</div>'+
-                        '<div class="column column-size">'+fileArr[i]['file-size']+'B</div>'+
-                        '<div class="column column-time">'+fileArr[i]['createtime']+'</div>'+
-                    '</li>';
-        };
-        for (var i = 0; i < dirArr.length; i++) {
-            dirArr[i] = $.extend(defaults, dirArr[i]);
-            var tips = "发布时间:"+dirArr[i].time+"&#10;"+"文件大小:"+dirArr[i].size + "B";
-            file +=  '<li class="row filelist-item clearfix" data-file="'+ filepath  + dirArr[i].name +'/" data-type="folder">'+
-                        '<div class="column column-checkbox"><label></label></div>'+
-                        '<div class="column column-name"  title="'+tips+'">'+
-                            '<span class="ico ico-folder ico-'+showDirType(dirArr[i].name)+'"></span>'+
-                            '<span class="text">'+ dirArr[i].name +'</span>'+
-                        '</div>'+
-                        '<div class="column column-size">'+dirArr[i].size+'B</div>'+
-                        '<div class="column column-time">'+dirArr[i].time+'</div>'+
-                    '</li>';
-        };
-        return file;
+        if (fileArr.length || dirArr.length) {
+            for (var i = 0; i < fileArr.length; i++) {
+                var tips = "发布时间:"+fileArr[i]['createtime']+"&#10;"+"文件大小:"+fileArr[i]['file-size'] + "B";
+                file +=  '<li class="row filelist-item clearfix" data-file="'+ filepath  + fileArr[i]['file-name'] +'/" data-type="file">'+
+                            '<div class="column column-checkbox"><label></label></div>'+
+                            '<div class="column column-name" title = "'+tips+'">'+
+                                '<span class="ico ico-file ico-'+showFileType(fileArr[i]['file-name'])+'"></span>'+
+                                '<span class="text">'+ fileArr[i]['file-name'] +'</span>'+
+                            '</div>'+
+                            '<div class="column column-size">'+fileArr[i]['file-size']+'B</div>'+
+                            '<div class="column column-time">'+fileArr[i]['createtime']+'</div>'+
+                        '</li>';
+            };
+            for (var i = 0; i < dirArr.length; i++) {
+                dirArr[i] = $.extend(defaults, dirArr[i]);
+                var tips = "发布时间:"+dirArr[i].time+"&#10;"+"文件大小:"+dirArr[i].size + "B";
+                file +=  '<li class="row filelist-item clearfix" data-file="'+ filepath  + dirArr[i].name +'/" data-type="folder">'+
+                            '<div class="column column-checkbox"><label></label></div>'+
+                            '<div class="column column-name"  title="'+tips+'">'+
+                                '<span class="ico ico-folder ico-'+showDirType(dirArr[i].name)+'"></span>'+
+                                '<span class="text">'+ dirArr[i].name +'</span>'+
+                            '</div>'+
+                            '<div class="column column-size">'+dirArr[i].size+'B</div>'+
+                            '<div class="column column-time">'+dirArr[i].time+'</div>'+
+                        '</li>';
+            };
+            isEmpty(false);
+        }else{
+            file = "";
+            isEmpty(true);
+        }     
+        return file;  
     }    
 
     /**
@@ -152,6 +163,13 @@ define(function (require, exports) {
         $(".column-name").on("click", function (e) {
             var _this = $(this).parent();
             _this.addClass("active").siblings().removeClass("active");
+            var filetype = _this.attr("data-type");
+            downPath = _this.attr("data-file");   // 获取文件下载路径
+            if (filetype == "file") {
+                $("#tbPackDl").removeClass("y-btn-disable");
+            }else{
+                $("#tbPackDl").addClass("y-btn-disable");
+            }
             e.stopPropagation();  // 阻止事件冒泡
             clearTimeout(times);
         }).on("mouseover, mouseenter", function (e) {
@@ -175,6 +193,7 @@ define(function (require, exports) {
         // 点击别处失焦
         $(document).on("click",function(){
             $("#list").find("li").removeClass('active');
+            $("#tbPackDl").addClass("y-btn-disable");
         });
 
         // 面包屑点击
@@ -189,6 +208,25 @@ define(function (require, exports) {
             var lastUrl = $(".last-item").prev();
             goUrl(lastUrl.attr("data-file"));
         });
+
+        // 文件下载
+        $("#tbPackDl").on("click", function(e){
+            e.stopPropagation();
+            if ($(this).hasClass("y-btn-disable")) {
+                return false;
+            }else{
+                dialog({
+                    head:"开始下载",
+                    title:"确认下载",
+                    msg:downPath,
+                    icon:"icon",
+                    flag:true
+                }, function(){
+                    alert("开始下载");
+                });
+            }
+            return;
+        })
     }
 
     /**
@@ -221,22 +259,25 @@ define(function (require, exports) {
      */
     function crumbPath(filepath){
         var str = "";
-   
         if (filepath == "/" || filepath == "") {
             str = '<span class="first-item last-item path-item">所有文件</span>';
         }else{
-            var arr = filepath.split("/");
-            str = '<span class="back">返回上一级</span>';
-            str += '<span class="first-item path-item" title="所有文件" data-file="#/">所有文件</span>';
-            var path = "/";
-            for (var i = 1; i < arr.length - 1; i++) {
-                path +=arr[i]+"/";
-                if (arr[i] != "" && (i < arr.length-2)) {
-                    str += '<span class="path-item" title="'+arr[i]+'" data-file="'+path+'">'+arr[i]+'</span>';
-                }else{
-                    str += '<span class="last-item path-item" data-href="false" title="'+arr[i]+'">'+arr[i]+'</span>';
-                }
-            };
+            try{
+                var arr = filepath.split("/");
+                str = '<span class="back">返回上一级</span>';
+                str += '<span class="first-item path-item" title="所有文件" data-file="#/">所有文件</span>';
+                var path = "/";
+                for (var i = 1; i < arr.length - 1; i++) {
+                    path +=arr[i]+"/";
+                    if (arr[i] != "" && (i < arr.length-2)) {
+                        str += '<span class="path-item" title="'+arr[i]+'" data-file="'+path+'">'+arr[i]+'</span>';
+                    }else{
+                        str += '<span class="last-item path-item" data-href="false" title="'+arr[i]+'">'+arr[i]+'</span>';
+                    }
+                };
+            }catch (e) {
+                isEmpty(true);
+            }
         }
         return str;
     }

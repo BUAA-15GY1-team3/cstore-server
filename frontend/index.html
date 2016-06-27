@@ -60,7 +60,7 @@
 			<div class="nav">
 				<ul>
 					<li class="tab-file clearfix current" data-tab="file">
-		                <a tabindex="1">
+		                <a tabindex="1" href="/index.html?file=">
 		                    <i class="icon icon-file"></i>
 		                    <span class="text">所有文件</span>
 		                    <span class="bg"></span>
@@ -123,16 +123,14 @@
 		        <!--面包屑-->
 		        <div id="crumb" class="cmd-panel">
 		        	<div class="crumb-path">
-		        		<span class="back" data-cn="back" data-index="-1">返回上一级</span>
-		        		<span class="first-item path-item" data-index="-1" title="所有文件" style="max-width: 36%;">所有文件</span>
-		        		<span class="last-item path-item" data-index="0" title="112312321321321321321" style="max-width: 57%;">112312321321321321321</span>
+		        		<span class="last-item path-item">所有文件</span>
 		        	</div>
 		        </div>
 		        <!--文件列表-->
 		        <div id="fileList" class="file-list-box clearfix file-tab">
 		        	<div id="fileListHead" class="file-list-head clearfix">
 		        		<div class="column column-checkbox">
-		        			<label class="chkall"></label>
+		        			<label class="chkall" style="visibility: hidden;"></label>
 		        		</div>
 		        		<div class="column column-name">
 		        			<span class="file-sort" data-field="name">
@@ -153,186 +151,6 @@
 		        	<div id="fileListMain">
 		        		<div id="listHolder" class="clearfix">
 		        			<ul id="list" class="file-list clearfix ico-list">
-		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
-		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
-										<span class="ico ico-folder"></span>
-										<span class="text">word</span>
-									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
-		        				</li>
-		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
-		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
-										<span class="ico"></span>
-										<span class="text">word</span>
-									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
-		        				</li>
-		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
-		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
-										<span class="ico ico-folder"></span>
-										<span class="text">word</span>
-									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
-		        				</li>
-		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
-		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
-										<span class="ico ico-xls"></span>
-										<span class="text">word</span>
-									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
-		        				</li>
-		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
-		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
-										<span class="ico ico-txt"></span>
-										<span class="text">word</span>
-									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
-		        				</li>
-		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
-		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
-										<span class="ico ico-html"></span>
-										<span class="text">word</span>
-									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
-		        				</li>
-		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
-		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
-										<span class="ico ico-folder"></span>
-										<span class="text">word</span>
-									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
-		        				</li>
-		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
-		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
-										<span class="ico ico-doc"></span>
-										<span class="text">word</span>
-									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
-		        				</li>
-		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
-		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
-										<span class="ico ico-folder"></span>
-										<span class="text">word</span>
-									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
-		        				</li>
-		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
-		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
-										<span class="ico ico-doc"></span>
-										<span class="text">word</span>
-									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
-		        				</li>
-		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
-		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
-										<span class="ico ico-folder"></span>
-										<span class="text">word</span>
-									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
-		        				</li>
-		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
-		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
-										<span class="ico ico-ppt"></span>
-										<span class="text">word</span>
-									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
-		        				</li>
-		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
-		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
-										<span class="ico ico-folder"></span>
-										<span class="text">word</span>
-									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
-		        				</li>
-		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
-		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
-										<span class="ico ico-doc"></span>
-										<span class="text">word</span>
-									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
-		        				</li>
-		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
-		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
-										<span class="ico ico-folder"></span>
-										<span class="text">word</span>
-									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
-		        				</li>
-		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
-		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
-										<span class="ico ico-ppt"></span>
-										<span class="text">word</span>
-									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
-		        				</li>
-		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
-		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
-										<span class="ico ico-folder"></span>
-										<span class="text">word</span>
-									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
-		        				</li>
-		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
-		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
-										<span class="ico ico-doc"></span>
-										<span class="text">word</span>
-									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
-		        				</li>
-		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
-		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
-										<span class="ico ico-folder"></span>
-										<span class="text">word</span>
-									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
-		        				</li>
-		        				<li class="row filelist-item clearfix">
-		        					<div class="column column-checkbox"><label></label></div>
-		        					<div class="column column-name" title="word创建时间: 2016-06-25 14:11">
-										<span class="ico ico-ppt"></span>
-										<span class="text">word</span>
-									</div>
-									<div class="column column-size">1KB</div>
-									<div class="column column-time">2016-06-25 15:59</div>
-		        				</li>
 		        			</ul>
 		        			<div class="emptyTips" id="emptyTips">
 		        				<img src="/resource/images/index/my_empty_folder.gif" alt="empty folder">

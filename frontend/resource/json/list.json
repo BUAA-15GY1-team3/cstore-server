@@ -8,7 +8,21 @@
                     "name": "b",
                     "dirList": [{
                         "name": "c",
-                        "dirList": [],
+                        "dirList": [{
+                            "name": "空文件",
+                            "dirList": [],
+                            "fileList":[]
+                        },{
+                            "name": "非空文件",
+                            "dirList": [],
+                            "fileList":[{
+                                "file-id": "4",
+                                "file-path": "./a/b/c",
+                                "file-name": "test.html",
+                                "file-size": "14",
+                                "createtime": ""
+                            }]
+                        }],
                         "fileList": [{
                             "file-id": "4",
                             "file-path": "./a/b/c",
