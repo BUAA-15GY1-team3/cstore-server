@@ -123,7 +123,7 @@ define(function (require, exports) {
         if (fileArr.length || dirArr.length) {
             for (var i = 0; i < fileArr.length; i++) {
                 var tips = "发布时间:"+fileArr[i]['createtime']+"&#10;"+"文件大小:"+fileArr[i]['file-size'] + "B";
-                file +=  '<li class="row filelist-item clearfix" data-file="'+ filepath  + fileArr[i]['file-name'] +'/" data-type="file">'+
+                file +=  '<li class="row filelist-item clearfix" data-file="'+ filepath  + fileArr[i]['file-name'] +'/" data-type="file" data-id="'+fileArr[i]['file-id']+'">'+
                             '<div class="column column-checkbox"><label></label></div>'+
                             '<div class="column column-name" title = "'+tips+'">'+
                                 '<span class="ico ico-file ico-'+showFileType(fileArr[i]['file-name'])+'"></span>'+

@@ -419,6 +419,14 @@
     margin: 0 0 0 -1px;
     position: relative;
 }
+#toolbar .item .y-btn:first-child:not(:last-child) {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+#toolbar .item .y-btn:last-child:not(:first-child) {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
 .y-btn .icon, .y-btn .label {
     float: left;
     overflow: hidden;

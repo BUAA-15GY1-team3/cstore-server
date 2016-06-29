@@ -13,7 +13,7 @@
                             "dirList": [],
                             "fileList":[]
                         },{
-                            "name": "非空文件",
+                            "name": "test.sss",
                             "dirList": [],
                             "fileList":[{
                                 "file-id": "4",
@@ -38,15 +38,81 @@
                         }, {
                             "file-id": "4",
                             "file-path": "./a/b/c",
-                            "file-name": "test",
+                            "file-name": "test.pdf",
                             "file-size": "14",
                             "createtime": ""
                         }, {
                             "file-id": "4",
                             "file-path": "./a/b/c",
-                            "file-name": "test",
+                            "file-name": "tes.xls",
                             "file-size": "14",
                             "createtime": "2016-06-26 11:40"
+                        }, {
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test.iso",
+                            "file-size": "14",
+                            "createtime": ""
+                        },{
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test.mp3",
+                            "file-size": "14",
+                            "createtime": ""
+                        }, {
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test.doc",
+                            "file-size": "14",
+                            "createtime": "2016-06-26 11:40"
+                        }, {
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test.7z",
+                            "file-size": "14",
+                            "createtime": ""
+                        }, {
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "tes.apk",
+                            "file-size": "14",
+                            "createtime": "2016-06-26 11:40"
+                        }, {
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test.bt",
+                            "file-size": "14",
+                            "createtime": ""
+                        }, {
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test.access",
+                            "file-size": "14",
+                            "createtime": "2016-06-26 11:40"
+                        }, {
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test.php",
+                            "file-size": "14",
+                            "createtime": ""
+                        }, {
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "tes.url",
+                            "file-size": "14",
+                            "createtime": "2016-06-26 11:40"
+                        }, {
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "tes.rar",
+                            "file-size": "14",
+                            "createtime": "2016-06-26 11:40"
+                        }, {
+                            "file-id": "4",
+                            "file-path": "./a/b/c",
+                            "file-name": "test.xml",
+                            "file-size": "14",
+                            "createtime": ""
                         }, {
                             "file-id": "4",
                             "file-path": "./a/b/c",
