@@ -121,6 +121,7 @@ function dialog(obj, callback){
     var btn = $(".ui-dialog-buttonset");
     $("#error").show();
     $(".ui-widget-overlay").show();
+    btn.empty();
     // 存在确定
     if (obj.flag) {
         btn.append('<button type="button" class="ui-button-blue ui-button m-r ui-sure">确 定</button>');
