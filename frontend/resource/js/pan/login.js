@@ -12,8 +12,17 @@ define(function (require, exports) {
 		}).on("mouseout",function(){
 			$(this).removeClass("current");
 		});
-	})
+	});
+	$(document).keydown(function (event) {
+		switch (event.keyCode) {
+			case 13:
+				loginSubmit();
+			break;
+		};
+		return true;
+	});
 })
+
 /**
  * 显示错误框
  * @param  {[type]} ele   [div原型]
@@ -29,6 +38,7 @@ function tips(ele,error,flag){
 		$(ele).hide();
 	}
 }
+
 /**
  * 登录事件
  */
