@@ -57,11 +57,12 @@ function loginSubmit(){
 			Uname: name,
 			Upass: hex_md5(pass)
 		}
-		setCookie("username", name, 30);
-		window.location.href = "index.html?file="
-		/*ajaxJsonCall("/api/login", data, "POST", true, function(data){
-			console.log(data);
-		});*/
+		//setCookie("username", name, 30);
+		//window.location.href = "index.html?file="
+		ajaxJsonCall("/api/login", data, "POST", true, function(data){
+			if (data) {}
+				console.log(data);
+		});
 	}
 	return true;
 }

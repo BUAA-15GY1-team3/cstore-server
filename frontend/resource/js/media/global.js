@@ -73,7 +73,7 @@ function ajaxJsonCall(post_path, data, type, async, callback) {
             //TODO: 处理status， http status code，超时 408
             // 注意：如果发生了错误，错误信息（第二个参数）除了得到null之外，还可能
             //是"timeout", "error", "notmodified" 和 "parsererror"。s
-            alert(XMLHttpRequest);
+            callback && callback(JSON.stringify(XMLHttpRequest));
         }, 
         success: function(result, textStatus, jqXHR) {
             callback && callback(result);
