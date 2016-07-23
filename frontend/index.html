@@ -7,6 +7,7 @@
 	<link rel="icon" href="/resource/images/ico/favicon-32.ico" sizes="32x32">
 	<link rel="icon" href="/resource/images/ico/favicon-48.ico" sizes="48x48">
 	<link rel="stylesheet" href="/resource/css/common.css">
+	<link rel="stylesheet" href="/resource/js/media/toastr/toastr.css">
 </head>
 <body>
 	<!--主要内容 BEGIN-->
@@ -44,7 +45,7 @@
 								</a>
 							</li>
 							<li class="loginout">
-								<a class="exit" id="tpExit" href="/logout">
+								<a class="exit" id="tpExit" href="javascript:;">
 									<i class="icon logout"></i>
 									<span class="text">退出星盘</span>
 								</a>
@@ -174,7 +175,7 @@
 				<div id="uploadPanel">
 					<div class="upload-list-box">
 						<div class="clearfix upload-list-main">
-	                        <input type="file" class="filestyle" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline v-middle input-s">
+	                        <input type="file" class="filestyle" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline v-middle input-s" id="file" name="upfile">
 	                    </div>
 	                    <div class="drag-tip" style=""></div>
 					</div>
@@ -192,6 +193,7 @@
 	<script src="resource/js/media/jquery.js" type="text/javascript"></script>
 	<script src="resource/js/media/bootstrap.min.js" type="text/javascript"></script>
 	<script src="resource/js/media/file-input/bootstrap-filestyle.min.js"></script>
+	<script src="resource/js/media/toastr/toastr.js"></script>
     <script src="resource/js/media/sea.js" type="text/javascript"></script>
     <script src="resource/js/media/config.js" type="text/javascript"></script>
     <!--引入登录页conf-->        

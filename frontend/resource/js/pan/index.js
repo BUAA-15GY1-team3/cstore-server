@@ -6,6 +6,7 @@ var path = "#/";
 var fileList = null;
 var dirType = ['folder','bookfolder','mix','picfolder','wordfolder'];
 var downPath = "";
+var fileId = 0;
 define(function (require, exports) {
 	$(document).ready(function(){
         getUserInfo();
@@ -15,6 +16,17 @@ define(function (require, exports) {
         } catch (e) {
             console.log(e);
         }
+
+        // 退出系统
+        $("#tpExit").on("click", function(e){
+            delCookie("username");
+            window.location.href = "/login.html";
+        });
+
+        // 上传文件
+        $("#uploadStatusBtn").on("click", function(e){
+            upLoadFile();
+        });
     });
 
     /**
@@ -57,7 +69,7 @@ define(function (require, exports) {
      * 获取文件列表展示
      */
     function list(){
-        ajaxJsonCall("/resource/json/list.json", null, "GET", true, function(data){
+        ajaxJsonCall("/api/listAllFile?uname="+username, null, "GET", true, function(data){
             if (data.errno == 0) {
                 fileList = data.data;
                 if (fileList && fileList != null) {
@@ -154,6 +166,41 @@ define(function (require, exports) {
         return file;  
     }    
 
+    /*
+    * 上传文件
+    */    
+    function upLoadFile(){
+        var filepath = path.split('#')[1] || "/";
+        var fileObj = document.getElementById('file').files[0]; // 获取文件对象
+        var obj = {
+            "uname":username,
+            "file-path":filepath,
+            "file-name":fileObj.name
+        }
+        UpladFile(obj,function(data){
+            if (typeof(data) == "string") {
+                data = JSON.parse(data);
+                if (typeof(data) == "string") {
+                    data = JSON.parse(data);
+                }
+            }
+            if (data.errno == 0) {
+                getUrl();
+                toastr['success']('文件上传成功！', '恭喜你');
+                list();
+                $(".mask").hide();
+                $("#BaseUpload").hide();
+            }else{
+                dialog({
+                    head:"错误",
+                    title:"你出现了错误!",
+                    msg:data['errmsg'],
+                    icon:"icon",
+                    flag:false
+                });
+            }
+        })
+    }
     /**
      * 点击事件处理
      */
@@ -170,6 +217,7 @@ define(function (require, exports) {
             }else{
                 $("#tbPackDl").addClass("y-btn-disable");
             }
+            fileId = _this.attr("data-id");
             e.stopPropagation();  // 阻止事件冒泡
             clearTimeout(times);
         }).on("mouseover, mouseenter", function (e) {
@@ -222,7 +270,8 @@ define(function (require, exports) {
                     icon:"icon",
                     flag:true
                 }, function(){
-                    alert("开始下载");
+                    $(".ui-close").click();
+                    window.open("/api/download?uname="+username+"&file-id="+fileId);
                 });
             }
             return;

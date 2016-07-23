@@ -23,22 +23,22 @@
 						<div class="form_item_wrap">
 							<div class="form_item" data-toggle="tooltip" data-placement="top" title="请输入要注册的用户名" data-trigger="hover">
 								<label class="user_ico">&nbsp;</label>
-								<input id="un" type="text"  class="ipt ipt_username gay_text" placeholder="邮箱/手机/用户名">
+								<input id="username" type="text"  class="ipt ipt_username gay_text" placeholder="邮箱/手机/用户名">
 							</div>
 							<div class="form_item" data-toggle="tooltip" data-placement="top" title="请设置新密码" data-trigger="hover">
 								<label class="paswd_ico">&nbsp;</label>
-								<input id="un" type="password"  class="ipt ipt_username gay_text" placeholder="注册密码">
+								<input id="password" type="password"  class="ipt ipt_username gay_text" placeholder="注册密码">
 							</div>
 							<div class="form_item" data-toggle="tooltip" data-placement="top" title="请确认新密码" data-trigger="hover">
 								<label class="paswd_ico">&nbsp;</label>
-								<input id="un" type="password"  class="ipt ipt_username gay_text" placeholder="确认密码">
+								<input id="newpassword" type="password"  class="ipt ipt_username gay_text" placeholder="确认密码">
 							</div>
 							<div class="auto_login clearfix">
 								<div class="clearfix">
 									<a id="check_agreement" href="javascript:;" class="uncheck_agreement check_agreement reg_agreement">我已经阅读并同意</a>
 									<a class="quc-link">《星盘用户服务条款》</a>
 								</div>
-								<button id="login_button" type="button" class="reg_btn">注册新账号</button>
+								<button  onclick="regSubmit();" type="button" class="reg_btn">注册新账号</button>
 							</div>
 						</div>
 						<div class="change">

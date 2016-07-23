@@ -45,7 +45,15 @@ function getCookie(name) {
     }
     return null;
 };
-
+//删除cookies
+function delCookie(name)
+{
+    var exp = new Date();
+    exp.setTime(exp.getTime() - 1);
+    var cval=getCookie(name);
+    if(cval!=null)
+        document.cookie= name + "="+cval+";expires="+exp.toGMTString();
+}
 /*获取url 参数*/
 function getParams(url) {
     var paraString = url.substring(url.indexOf("?") + 1, url.length).split("&");
@@ -63,7 +71,7 @@ function getParams(url) {
  */
 function ajaxJsonCall(post_path, data, type, async, callback) {
     $.ajax({
-        url: post_path, //实时刷新数据
+        url: "http://10.99.218.127:8080" + post_path, //实时刷新数据
         timeout: 12000,
         type: type,
         async: async,
@@ -73,7 +81,7 @@ function ajaxJsonCall(post_path, data, type, async, callback) {
             //TODO: 处理status， http status code，超时 408
             // 注意：如果发生了错误，错误信息（第二个参数）除了得到null之外，还可能
             //是"timeout", "error", "notmodified" 和 "parsererror"。s
-            callback && callback(JSON.stringify(XMLHttpRequest));
+            callback && callback(XMLHttpRequest.responseText);
         }, 
         success: function(result, textStatus, jqXHR) {
             callback && callback(result);
@@ -137,4 +145,46 @@ function dialog(obj, callback){
         e.stopPropagation();
         callback && callback(e);
     });
+}
+
+
+/**
+ * 显示错误框
+ * @param  {[type]} ele   [div原型]
+ * @param  {[type]} error [错误提醒]
+ * @param  {[type]} flag  [是否展示]
+ */
+function tips(ele,error,flag){
+    if (flag) {
+        $(ele).html(error);
+        $(ele).show();
+    }else{
+        $(ele).empty();
+        $(ele).hide();
+    }
+}
+
+
+//上传表单
+function UpladFile(obj, callback) {
+    var fileObj = document.getElementById('file').files[0]; // 获取文件对象
+    if (fileObj == undefined) {
+        alert("请选择上传文件");
+    }
+    else {
+        var FileController = "/api/upload?uname="+obj.uname+"&file-path="+obj["file-path"]+"&file-name="+fileObj.name;
+        var form = new FormData();                           // 文件对象
+        form.append("file", fileObj);
+        // XMLHttpRequest 对象
+
+        var xhr = new XMLHttpRequest();
+
+        xhr.open("post", FileController, true);
+        xhr.onreadystatechange = function () {
+            if (xhr.status == 200 && xhr.readyState == 4) {
+                callback && callback(xhr.responseText);
+            };
+        }
+        xhr.send(form);
+    }
 }

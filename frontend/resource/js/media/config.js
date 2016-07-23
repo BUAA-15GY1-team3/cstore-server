@@ -10,6 +10,8 @@ seajs.config({
         'xpanLoginStyle':'css/login.css',
         'xpanLogin':'js/pan/login',
 
+        // reg
+        'xpanReg':'js/pan/reg',
         // index
         'xpanIndexStyle':'css/index.css',
         'xpanIndexNav':'js/pan/index.nav',

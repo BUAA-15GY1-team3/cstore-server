@@ -4,4 +4,5 @@ $(function () {
 		var arr = ["#ac0908", "#cd5726"];
 	    new canvas(arr);
 	});
+	seajs.use('xpanReg');
 });
